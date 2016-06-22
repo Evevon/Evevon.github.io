@@ -6,9 +6,16 @@ body {
 	height:250px;
 }
 
+.banner img{
+	position:relative;
+	top:40px;
+	display: block;
+	margin: auto;
+}
+
 h1 {
 	position: relative;
-	top: 100px;
+	top: 10px;
 	color: white;
 	font-family: arial;
 	font-size: 70px;

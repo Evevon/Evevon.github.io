@@ -6,6 +6,7 @@
 </head>
 <body>
 	<div class="banner">
+		<img src="paclogo.png"/>
 		<h1>Intelligent Pacman</h1>
 		
 		
@@ -69,7 +70,7 @@
 		
 		<p>
 		Op maandag hebben wij in python de benodigde code voor pacman 
-		gemaakt, en een klein 2 bij 4 bord voor het uitvoeren van tests. 
+		gemaakt, en een klein 2 bij 3 bord voor het uitvoeren van tests. 
 		Classes voor alle onderdelen in pacman zijn gemaakt met definities
 		van wat deze onderdelen kunnen doen:
 		<ul>
@@ -91,7 +92,7 @@
 		
 		<p>
 		We hebben ons ook verdiept in Q-learning, en hebben dit toegepast op het 
-		kleine 2 bij 4 bord met het gebruik van een tabel met Q-waardes.<br><br>
+		kleine 2 bij 3 bord met het gebruik van een tabel met Q-waardes.<br><br>
 		</p>
 
 		<h4>Woensdag 22 Juni</h4>
@@ -113,13 +114,13 @@
 		We hebben het hier al over meer dan 9<sup>2</sup> states waar een 
 		tabel voor gemaakt moet worden met waarden. Dit achtten wij niet 
 		practisch. In plaats van het opstellen van een grote tabel gaat onze 
-		interesse uit naar feature-based Q-learning, waarbij niet de states, maar 
+		interesse uit naar Approximate Q-learning, waarbij niet de states, maar 
 		specifieke features tijdens het leren in acht genomen worden. 
 		</p>
 		
 		<p>
 		Een feature is een bepaald kenmerk in states van een wereld die relevant 
-		kunnen zijn voor de agent om zijn doel te bereiken. Feature-based 
+		kunnen zijn voor de agent om zijn doel te bereiken. Approximate
 		Q-learning updated de weging van een bepaalde feature om de Q-waarde 
 		te berekenen zodat deze zo dicht mogelijk bij de echte reward waarde 
 		komt te liggen. Het voordeel hiervan is dat pacman in verschillende 

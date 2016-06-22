@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Intelligent Pacman</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="banner">
+		<h1>Intelligent Pacman</h1>
+		
+		
+	</div>
+	
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><span>Labboek Online</li>
+			<li><a href="#">About</a></li>
+		</ul>
+	</nav>
+	
+	<div class="container_labboek">
+		
+		<div class="content">
+		
+		<h3>Introductie</h3>
+		
+		<p>
+		In dit project zal de computer leren hoe het pacman efficient kan spelen,
+		met gebruik van machine learning (((voeg machine learning theorie kort toe))). 
+		Onze hypothese is dat met behulp van Q-learning, de computer kan leren om pacman
+		efficient te spelen.  De gebruikte software is python 3, in een 32 bit linux ubuntu 
+		virtual machine.<br><br>
+		
+		Het project is opgedeeld in een aantal stappen:
+		
+		<ol>
+			<li> het maken van een kleine pacman omgeving </li>
+			<li> het implementeren van Q-learning </li>
+			<li> het maken van een volledig pacman bord waar pacman kan leren</li><br>
+		</ol>
+		
+		</p>
+		
+		<p>
+		In eerste instantie moet een kleine omgeving gebouwd worden die 
+		de regels van pacman hanteert. Dit houdt in: pacman en ghosts 
+		kunnen niet door muren lopen, aangeraakt worden door een ghost is 
+		nadelig, en het pakken van voedsel is voordelig.
+		</p>
+		
+		<p>
+		De tweede stap is het implementeren van Q-learning in de kleine omgeving.
+		De hypothese is dat Q-learing goed werkt voor een pad-probleem zoals 
+		pacman, maar dat het lastiger zal worden naarmate het bord groter wordt. 
+		Het idee is dus om het bord stap voor stap uit te breiden.
+		</p>
+		
+		<p>
+		De laatste stap is het maken van een volledig pacman bord met alle 
+		tegenstanders, waar de Q-learning op toegepast wordt. De hypothese is 
+		dat wanneer alles werkt op kleine schaal, dit met een aantal aanpassingen 
+		ook op grote schaal zal werken.<br><br>
+		</p>
+		
+		<h3>Voortgangsrapportage</h3>
+		
+		<h4>Maandag 20 Juni</h4>
+		
+		<p>
+		Op maandag hebben wij in python de benodigde code voor pacman 
+		gemaakt, en een klein 2 bij 4 bord voor het uitvoeren van tests. 
+		Classes voor alle onderdelen in pacman zijn gemaakt met definities
+		van wat deze onderdelen kunnen doen:
+		<ul>
+			<li> Pacman </li>
+			<li> Ghosts	</li>		
+			<li> Dots </li>		
+			<li> Achtergrond zoals paden en blokjes </li><br>
+		</ul>
+		</p>
+		
+		<p>
+		De ghosts bewegen richting pacman door de afstand tussen pacman en 
+		henzelf te schatten en deze te minimalizeren. We wilden de beweging 
+		van de ghosts gericht maken, maar ook simpel. Hierom hebben we ervoor 
+		gekozen dat de ghosts hun afstand tot pacman berekenen met behulp van 
+		pythagoras en deze afstand willen verkleinen. Dit werkt in vrijwel 
+		alle gevallen naar behoren.		
+		</p>
+		
+		<p>
+		We hebben ons ook verdiept in Q-learning, en hebben dit toegepast op het 
+		kleine 2 bij 4 bord met het gebruik van een tabel met Q-waardes.<br><br>
+		</p>
+
+		<h4>Woensdag 22 Juni</h4>
+		
+		<p>
+		Vandaag hebben we ons verder verdiept in Q-learning. We zijn van 
+		mening dat Q-learning met gebruik van een tabel niet practisch zal 
+		zijn om pacman te spelen op een redelijk speelveld. Een redelijk 
+		speelveld is een speelveld met de volgende specificaties:
+
+			<ul>		
+			<li> Een veld van 3*3=9 vakjes</li>
+			<li> E&eacute;n ghost als tegenstander</li>
+			<li> Minimaal &eacute;&eacute;n dot dat pacman op moet pakken om te winnen.</li><br>
+			</ul>
+		</p>
+		
+		<p>
+		We hebben het hier al over meer dan 9<sup>2</sup> states waar een 
+		tabel voor gemaakt moet worden met waarden. Dit achtten wij niet 
+		practisch. In plaats van het opstellen van een grote tabel gaat onze 
+		interesse uit naar feature-based Q-learning, waarbij niet de states, maar 
+		specifieke features tijdens het leren in acht genomen worden. 
+		</p>
+		
+		<p>
+		Een feature is een bepaald kenmerk in states van een wereld die relevant 
+		kunnen zijn voor de agent om zijn doel te bereiken. Feature-based 
+		Q-learning updated de weging van een bepaalde feature om de Q-waarde 
+		te berekenen zodat deze zo dicht mogelijk bij de echte reward waarde 
+		komt te liggen. Het voordeel hiervan is dat pacman in verschillende 
+		contexten een goede state van een slechte state kan onderscheiden door 
+		kennis te gebruiken over gelijksoortige states.
+
+		</p>
+		
+		<p>
+		De gekozen features zijn:
+
+			<ul>
+			<li> De afstand tot de dichtst bijzijnde dot</li>
+			<li> De afstand tot de ghost.</li><br>
+			</ul>
+		</p>
+		
+		<p>
+		Er is gekozen voor deze features om het probleem simpel te houden. 
+		Ook zijn wij van mening dat voor de kleine schaal van het bord dat gebruikt 
+		word, meerdere features niet nodig zijn.
+		</p>
+		
+		
+		</div>
+		
+		
+	</div>
+
+	
+	<div class="footercontent">
+		<p>
+			Intelligent Pacman is een project van Evelyne van Oers, 
+			Ruben van Heusden, Daniel Groen en Danielle Bijl voor het vak 
+			'Zoeken, Sturen en Bewegen' van de opleiding Kunstmatige 
+			Intelligentie aan de UVA.
+		</p>
+	</div>
+	
+</body>
+</html>

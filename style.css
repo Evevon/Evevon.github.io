@@ -65,6 +65,14 @@ nav li{
 }
 
 
+.container_video{
+	position:relative;
+	width: 100vw;
+	height: 800px;
+	right: 8px;
+	background-color: #fff;
+}
+
 .content{
 	font-family: arial;
 	font-size: 20px;

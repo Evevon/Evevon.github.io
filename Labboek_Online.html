@@ -28,9 +28,15 @@
 		
 		<p>
 		In dit project zal de computer leren hoe het pacman efficient kan spelen,
-		met gebruik van machine learning (((voeg machine learning theorie kort toe))). 
-		Onze hypothese is dat met behulp van Q-learning, de computer kan leren om pacman
-		efficient te spelen.  De gebruikte software is python 3, in een 32 bit linux ubuntu 
+		met gebruik van machine learning. Onze hypothese is dat met behulp van Q-learning, 
+		de computer kan leren om pacman	efficient te spelen.  
+		Q-learning maakt gebruik van twee matrices: een Q-matrix en een Reward matrix. 
+		De reward matrix staat voor de reward r die een agent krijgt voor het uitvoeren 
+		van een actie a van een staat s naar de andere staat s'. De Q-matrix is het geheugen 
+		van de agent, die na iedere reward voor een actie geupdated wordt met kennis.
+		<br><br>
+		
+		De gebruikte software is python 3, in een 32 bit linux ubuntu 
 		virtual machine.<br><br>
 		
 		Het project is opgedeeld in een aantal stappen:
@@ -144,6 +150,68 @@
 		word, meerdere features niet nodig zijn.
 		</p>
 		
+		<h4>Donderdag 23 Juni</h4>
+		
+		<p>Op deze dag hebben we het grotere 3 bij 3 bord gemaakt en de 
+		features geimplementeerd. </p>
+
+		<p>Voor de closest dot feature hebben we besloten breadth 
+		first search te gebruiken om dichtst bijzijnde dot te 
+		vinden. Anders vind je niet per se de beste dot. Met 
+		breadth first search vindt het op de snelste manier de 
+		dichtst bijzijnde dot, door vanaf pacman de aangrenzende 
+		vakjes te onderzoeken.</p>
+
+		<p>Voor de ghost distance wordt pythagoras gebruikt om de 
+		afstand van pacman tot de ghost te leren.</p>
+
+		<p>Met Q-learning moet pacman leren hoe voordelig het is 
+		om naar voedsel te lopen, en welke afstand tot een ghost 
+		houden voordelig is.</p>
+
+		<p>Breadth first search was goed in verschillende paden 
+		vergelijken: echter konden wij de lengte van de paden 
+		niet krijgen. Dit was een groot probleem, want voor de 
+		feature waarde mogen de pad waardes niet te veel 
+		schommelen. De pad lengte werd gebruikt om voor een 
+		lineair verband te krijgen tussen de waarden van een pad.</p>
+
+		<p>Dit probleem hebben wij opgelost door het invoegen van 
+		een method die het pad langs gaat met breadth first 
+		search, en zo de beste volgende state vindt. Deze beste 
+		volgende state wordt opgeslagen in het solution path, 
+		tot het doel bereikt is.</p>
+
+		
+		
+		<h4>Vrijdag 24 Juni</h4>
+
+		<p>Vandaag hebben we nog gekeken naar de mogelijkheid om onze code 
+		aan te passen zodat de beslissingen van pacman gemaakt worden per 
+		choice point in plaats van per node. Dit zou een hoop schelen in de 
+		berekeningen die gemaakt worden. Als de hoeveelheid berekeningen 
+		geminimaliseerd worden, is de verwachting dat onze code ook op het
+		originele, grote pacman bord kan werken. Hier is echter nog meer tijd 
+		voor nodig.</p>
+
+		
+		<h3>Discussie</h3>
+
+		<p>De resultaten van dit project zijn goed, al zou het beter zijn geweest 
+		als we aan het begin meer informatie op hadden gezocht voor we 
+		begonnen. Dit omdat er dan misschien tijd was geweest om uit te vinden 
+		hoe we de machine learning onafhankelijk maken. Aan het eind van dit 
+		project werkt alles naar behoren. We werken echter wel met gehardcode 
+		feature weights. De bedoeling met approximate Q-learning is dat deze 
+		feature weights na veel leren door de machine juist afgestemd worden, 
+		maar er was geen tijd meer voor om dit te implementeren. Dit zou 
+		kunnen komen omdat wij het werk onderschat hebben. We zouden 
+		waarschijnlijk nog een extra week nodig hebben om meer over 
+		approximate Q-learning te weten te komen, en hoe we dit implementeren 
+		in onze pacman environment. Zowel de features automatisch door machine 
+		learning optimaal af laten stellen, alsmede pacman op het originele, grote 
+		bord te laten werken.</p>
+
 		
 		</div>
 		

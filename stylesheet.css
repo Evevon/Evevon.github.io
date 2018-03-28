@@ -1,0 +1,43 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    color: #111e0f;
+    background-color: #efeeda;
+}
+
+#home_banner {
+    padding: 0px;
+    height: 50vw;
+    max-height: 80vh;
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+        ),
+        url(nio_demon.png);
+    background-size: cover;
+    width: auto;
+    margin: 0 auto;
+    color: #ffffff;
+}
+
+#inner_banner {
+    position: relative;
+    top: 50%;
+    -ms-transform: perspective(1px) translateY(-40%);
+    -webkit-transform: perspective(1px) translateY(-40%);
+    transform: perspective(1px) translateY(-30%);
+    padding: 20px 80px;
+    text-align: center;
+    font-size: 3.6vw;
+}
+
+#inner_banner h4 {
+    padding-top: 1em;
+    font-size: 2.2vw;
+}

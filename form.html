@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-<link rel="StyleSheet" href="formstylesheet.css" type="text/css" media="all" />
 </head>
 
 <script type="text/javascript"
@@ -13,24 +12,47 @@ src="formfunctionality.js">
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">Name:
-  <p><input placeholder="First name..." oninput="this.className = ''"></p>
-  <p><input placeholder="Last name..." oninput="this.className = ''"></p>
+  <fieldset id="group1">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
+  <fieldset id="group2">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
 </div>
 
 <div class="tab">Contact Info:
-  <p><input placeholder="E-mail..." oninput="this.className = ''"></p>
-  <p><input placeholder="Phone..." oninput="this.className = ''"></p>
+  <fieldset id="group3">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
+  <fieldset id="group4">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
 </div>
 
 <div class="tab">Birthday:
-  <p><input placeholder="dd" oninput="this.className = ''"></p>
-  <p><input placeholder="mm" oninput="this.className = ''"></p>
-  <p><input placeholder="yyyy" oninput="this.className = ''"></p>
+  <fieldset id="group5">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
+  <fieldset id="group6">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
 </div>
 
 <div class="tab">Login Info:
-  <p><input placeholder="Username..." oninput="this.className = ''"></p>
-  <p><input placeholder="Password..." oninput="this.className = ''"></p>
+  <fieldset id="group7">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
+  <fieldset id="group8">
+    <input type="radio" value="" name="group1"> one
+    <input type="radio" value="" name="group1"> two
+  </fieldset>
 </div>
 
 <div style="overflow:auto;">

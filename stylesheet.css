@@ -6,11 +6,10 @@
 
 body {
     font-family: Helvetica, Arial, sans-serif;
-    color: #341D16;
+    color: #aaa;
     font-size: 18px;
-    background-color: #efeeda;
+    background-color: #111;
 }
-
 
 #home_banner {
     padding: 0px;
@@ -22,7 +21,7 @@ body {
             rgba(0,0,0,0.2),
             rgba(0,0,0,0.2)
         ),
-        url(nio_demon.png);
+        url(indexbgart.png);
     background-size: cover;
     width: auto;
     margin: 0 auto;
@@ -30,10 +29,11 @@ body {
 }
 
 #navbar {
-    background-color: #000;
+	position: fixed;
+	width: 100%;
+    background-color: #333;
     padding: 1em 3em;
     margin-bottom: 1em;
-
 }
 
 #navbar li {
@@ -46,7 +46,7 @@ body {
 }
 
 #navbar li a:hover{
-    color: #383838;
+    color: #009DFF;
 }
 
 #home_navi {
@@ -97,6 +97,7 @@ body {
 }
 
 #page_content {
+	padding:4em;
     margin: 0 auto;
     width: 95vw;
     max-width: 700px;
@@ -104,15 +105,15 @@ body {
 
 #page_content h1 {
     padding-bottom: 20px;
-    font-size: calc(20px + 9vw);
-    color: #852312;
+    font-size: calc(20px + 3vw);
+    color: #fff;
     text-align: center;
 }
 
 #page_content h3 {
     padding-bottom: 15px;
-    font-size: calc(15px + 5vw);
-    color: #852312;
+    font-size: calc(15px + 2.3vw);
+    color: #fff;
     text-align: center;
 }
 
@@ -125,18 +126,19 @@ body {
 #page_content a {
     text-decoration: none;
     font-weight: bold;
-    color: #bf2c00;
+    color: #fff;
+}
+
+#page_content a:hover{
+	color: #009DFF;
 }
 
 @media screen and (min-width: 700px) {
     #page_content h1 {
-        font-size: 90px;
+        font-size: 40px;
     }
     #page_content h3 {
-        font-size: 50px;
-    }
-    #divider {
-        font-size: 150px;
+        font-size: 30px;
     }
 }
 
@@ -146,7 +148,7 @@ body {
 	margin-bottom: 3vw;
     border-style: solid;
     border-width: 1vw;
-    border-color: #bf2c00;
+    border-color: #000000;
 }
 
 #artwork {

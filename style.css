@@ -134,6 +134,8 @@ footer {
   font-size: 50px;
 }
 
+.externallinks a {color: black;}
+
 .externallinks a:hover {color: orange;}
 
 #portrait {
